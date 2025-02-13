@@ -1,0 +1,12 @@
+@startuml
+actor Administrador
+actor Proveedor
+
+(Seleccionar Productos) --> (Registrar Compra)
+(Verificar Disponibilidad) --> (Registrar Compra)
+(Confirmar Compra) --> (Registrar Compra)
+(Actualizar Inventario) --> (Registrar Compra)
+
+Administrador -- (Registrar Compra)
+Proveedor -- (Registrar Compra)
+@enduml

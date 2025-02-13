@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+
+(Seleccionar Tipo de Transacción) --> (Registrar Transacción)
+(Ingresar Datos) --> (Registrar Transacción)
+(Guardar en Base de Datos) --> (Registrar Transacción)
+
+Administrador -- (Registrar Transacción)
+@enduml

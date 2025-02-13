@@ -1,0 +1,13 @@
+@startuml actividad_agendar_clase
+start
+:Cliente accede a la plataforma;
+:Selecciona clase y horario;
+if (Cupo disponible?) then (Sí)
+  :Registrar inscripción a la clase;
+  :Actualizar disponibilidad de cupos;
+  :Confirmar reserva al cliente;
+  stop
+else (No)
+  :Notificar falta de cupo;
+  stop
+@enduml

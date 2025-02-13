@@ -1,0 +1,15 @@
+@startuml
+class Empleado {
+  +String idEmpleado
+  +String nombre
+  +String cargo
+  +double salario
+  +String telefono
+  +String email
+  +Date fechaContratacion
+  +void actualizarPerfil()
+  +void verNomina()
+  +void solicitarVacaciones()
+  +void registrarAsistencia()
+}
+@enduml

@@ -1,0 +1,94 @@
+@startuml clases
+
+class ClienteProveedor {
+  +String id
+  +String nombre
+  +String direccion
+  +String telefono
+  +String email
+  +String tipo  // Cliente o Proveedor
+  +Date fechaRegistro
+  +double saldoPendiente
+  +void realizarPedido()
+  +void verHistorial()
+  +void actualizarPerfil()
+  +void gestionarPagos()
+  +void enviarNotificacion()
+  +void aplicarDescuento()
+}
+
+class InventarioCompras {
+  +String idCompra
+  +Date fechaCompra
+  +double totalCompra
+  +Map<String, Integer> productosStock
+  +String proveedor
+  +void agregarProducto()
+  +void calcularTotal()
+  +void aplicarDescuento()
+  +void gestionarInventario()
+  +void actualizarStock()
+  +void eliminarProducto()
+}
+
+class Contabilidad {
+  +double ingresos
+  +double gastos
+  +double balance
+  +List<String> transacciones
+  +void generarReporte()
+  +void calcularBalance()
+  +void generarFactura()
+  +void registrarTransaccion()
+  +void gestionarImpuestos()
+  +void calcularBeneficios()
+}
+
+class Nomina {
+  +String idEmpleado
+  +String nombre
+  +double salarioBase
+  +double bonificaciones
+  +double deducciones
+  +Date fechaPago
+  +void calcularSalario()
+  +void generarRecibo()
+  +void aplicarDeducciones()
+  +void gestionarBonificaciones()
+}
+
+class Venta {
+  +String idVenta
+  +Date fecha
+  +double total
+  +List<String> productosVendidos
+  +String cliente
+  +void agregarProducto()
+  +void calcularTotal()
+  +void aplicarDescuento()
+  +void generarFactura()
+  +void registrarPago()
+}
+
+class Empleado {
+  +String idEmpleado
+  +String nombre
+  +String cargo
+  +double salario
+  +String telefono
+  +String email
+  +Date fechaContratacion
+  +void actualizarPerfil()
+  +void verNomina()
+  +void solicitarVacaciones()
+  +void registrarAsistencia()
+}
+
+ClienteProveedor "1" -- "0..*" InventarioCompras
+InventarioCompras "1" -- "1" Contabilidad
+Nomina "1" -- "1" Contabilidad
+Venta "1" -- "1" Contabilidad
+Empleado "1" -- "1" Nomina
+Venta "0..*" -- "1" ClienteProveedor
+
+@enduml

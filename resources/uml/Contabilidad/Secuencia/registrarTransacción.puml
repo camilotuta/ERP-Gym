@@ -1,0 +1,10 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "Contabilidad" as Contabilidad
+
+Administrador -> ERP : Registra una nueva transacción
+ERP -> Contabilidad : Guarda los detalles de la transacción
+Contabilidad -> ERP : Confirma registro
+ERP -> Administrador : Muestra confirmación de la transacción
+@enduml

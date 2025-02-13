@@ -1,0 +1,7 @@
+@startuml Casos de uso
+left to right direction
+actor Empleado
+rectangle GymERP {
+  Empleado -- (Registrar Venta)
+}
+@enduml

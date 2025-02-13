@@ -1,0 +1,12 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "InventarioCompras" as Inventario
+
+Empleado -> ERP : Solicita calcular total de compra
+ERP -> Inventario : Obtiene lista de productos
+Inventario -> ERP : Retorna lista con precios y cantidades
+ERP -> Inventario : Calcula total
+Inventario -> ERP : Retorna total calculado
+ERP -> Empleado : Muestra total de la compra
+@enduml

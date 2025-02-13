@@ -1,0 +1,14 @@
+@startuml
+start
+:Empleado inicia la adición de un producto;
+:El sistema solicita los datos del producto;
+:Empleado ingresa los datos;
+if (¿Producto ya existe?) then (Sí)
+  :Actualizar stock del producto existente;
+else (No)
+  :Registrar nuevo producto;
+endif
+:Guardar cambios en la base de datos;
+:Mostrar confirmación al empleado;
+stop
+@enduml

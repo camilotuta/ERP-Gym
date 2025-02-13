@@ -1,0 +1,9 @@
+@startuml
+start
+:Cliente solicita factura de su compra;
+:El sistema recupera los datos de la venta;
+:Genera documento en formato PDF;
+:Permite descargar o enviar por correo;
+:Mostrar confirmación al cliente;
+stop
+@enduml

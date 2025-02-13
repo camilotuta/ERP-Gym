@@ -1,0 +1,14 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "InventarioCompras" as Inventario
+
+Administrador -> ERP : Solicita gestión del inventario
+ERP -> Inventario : Consulta estado del stock
+Inventario -> ERP : Retorna datos de stock
+ERP -> Administrador : Muestra estado actual del inventario
+Administrador -> ERP : Modifica inventario (agrega/elimina productos)
+ERP -> Inventario : Actualiza stock
+Inventario -> ERP : Confirmación de actualización
+ERP -> Administrador : Muestra cambios realizados
+@enduml

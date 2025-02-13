@@ -1,0 +1,15 @@
+@startuml
+class InventarioCompras {
+  +String idCompra
+  +Date fechaCompra
+  +double totalCompra
+  +Map<String, Integer> productosStock
+  +String proveedor
+  +void agregarProducto()
+  +void calcularTotal()
+  +void aplicarDescuento()
+  +void gestionarInventario()
+  +void actualizarStock()
+  +void eliminarProducto()
+}
+@enduml

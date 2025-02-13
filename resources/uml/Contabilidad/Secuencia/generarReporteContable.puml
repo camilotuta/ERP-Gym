@@ -1,0 +1,10 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "Contabilidad" as Contabilidad
+
+Administrador -> ERP : Solicita un reporte contable
+ERP -> Contabilidad : Obtiene datos financieros
+Contabilidad -> ERP : Retorna el reporte generado
+ERP -> Administrador : Muestra reporte contable
+@enduml

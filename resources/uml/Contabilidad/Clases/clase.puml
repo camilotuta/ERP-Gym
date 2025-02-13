@@ -1,0 +1,14 @@
+@startuml
+class Contabilidad {
+  +double ingresos
+  +double gastos
+  +double balance
+  +List<String> transacciones
+  +void generarReporte()
+  +void calcularBalance()
+  +void generarFactura()
+  +void registrarTransaccion()
+  +void gestionarImpuestos()
+  +void calcularBeneficios()
+}
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+actor Empleado
+actor Cliente
+
+(Verificar Cliente) --> (Aplicar Descuento)
+(Seleccionar Tipo de Descuento) --> (Aplicar Descuento)
+(Aplicar Nuevo Precio) --> (Aplicar Descuento)
+
+Empleado -- (Aplicar Descuento)
+Cliente -- (Solicitar Descuento)
+@enduml

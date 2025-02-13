@@ -1,0 +1,10 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "Contabilidad" as Contabilidad
+
+Administrador -> ERP : Solicita cálculo de balance
+ERP -> Contabilidad : Obtiene ingresos y gastos
+Contabilidad -> ERP : Calcula balance y lo envía
+ERP -> Administrador : Muestra balance financiero
+@enduml

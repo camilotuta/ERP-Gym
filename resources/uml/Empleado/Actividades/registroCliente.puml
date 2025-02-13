@@ -1,0 +1,13 @@
+@startuml actividad_registro_cliente
+start
+:Cliente ingresa datos personales;
+:Validar datos ingresados;
+if (Datos correctos?) then (Sí)
+  :Registrar cliente en el sistema;
+  :Generar credenciales de acceso;
+  :Enviar confirmación por email;
+  stop
+else (No)
+  :Mostrar mensaje de error;
+  stop
+@enduml

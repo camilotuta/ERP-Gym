@@ -1,0 +1,39 @@
+@startuml Casos de uso
+left to right direction
+actor Cliente
+actor Empleado
+actor Administrador
+
+rectangle GymERP {
+  Cliente -- (Gestionar Perfil)
+  Cliente -- (Realizar Compra)
+  Cliente -- (Ver Historial de Compras)
+  Cliente -- (Solicitar Devolución)
+  Cliente -- (Pagar Membresía)
+  Cliente -- (Reservar Clase)
+  Cliente -- (Consultar Plan de Entrenamiento)
+  
+  Empleado -- (Registrar Cliente)
+  Empleado -- (Registrar Venta)
+  Empleado -- (Gestionar Inventario)
+  Empleado -- (Procesar Devolución)
+  Empleado -- (Asignar Plan de Entrenamiento)
+  Empleado -- (Registrar Asistencia a Clases)
+  
+  Administrador -- (Gestionar Empleados)
+  Administrador -- (Generar Reportes Contables)
+  Administrador -- (Gestionar Compras)
+  Administrador -- (Gestionar Descuentos)
+  Administrador -- (Configurar Tarifas de Membresía)
+  Administrador -- (Supervisar Estadísticas del Gimnasio)
+}
+
+(Realizar Compra) .> (Gestionar Inventario) : extends
+(Registrar Venta) .> (Gestionar Inventario) : extends
+(Generar Reportes Contables) .> (Gestionar Compras) : extends
+(Solicitar Devolución) .> (Procesar Devolución) : extends
+(Pagar Membresía) .> (Configurar Tarifas de Membresía) : extends
+(Reservar Clase) .> (Registrar Asistencia a Clases) : extends
+(Consultar Plan de Entrenamiento) .> (Asignar Plan de Entrenamiento) : extends
+
+@enduml

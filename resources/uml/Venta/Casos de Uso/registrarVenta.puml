@@ -1,0 +1,12 @@
+@startuml
+actor Empleado
+actor Cliente
+
+(Seleccionar Productos) --> (Registrar Venta)
+(Aplicar Descuento) --> (Registrar Venta)
+(Procesar Pago) --> (Registrar Venta)
+(Actualizar Inventario) --> (Registrar Venta)
+
+Empleado -- (Registrar Venta)
+Cliente -- (Procesar Pago)
+@enduml

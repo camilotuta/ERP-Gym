@@ -1,0 +1,9 @@
+@startuml
+start
+:Administrador solicita un reporte contable;
+:El sistema obtiene ingresos y gastos;
+:Calcula balance financiero;
+:Genera el reporte en formato PDF;
+:Permite visualizar o descargar;
+stop
+@enduml

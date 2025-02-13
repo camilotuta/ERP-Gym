@@ -1,0 +1,12 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "InventarioCompras" as Inventario
+
+Empleado -> ERP : Solicita agregar un producto
+ERP -> Inventario : Verifica existencia del producto
+Inventario -> ERP : Retorna resultado
+ERP -> Inventario : Agrega el producto al stock
+Inventario -> ERP : Confirmación de adición
+ERP -> Empleado : Notifica éxito de operación
+@enduml

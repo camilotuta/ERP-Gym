@@ -1,0 +1,9 @@
+@startuml
+start
+:Empleado solicita cálculo del total de compra;
+:El sistema recupera los productos en la compra;
+:Obtiene precios y cantidades;
+:Calcula total de compra;
+:Mostrar total al empleado;
+stop
+@enduml

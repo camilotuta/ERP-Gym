@@ -1,0 +1,12 @@
+@startuml
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Venta" as Venta
+
+Cliente -> ERP : Solicita un descuento
+ERP -> Venta : Verifica elegibilidad del descuento
+Venta -> ERP : Retorna resultado
+ERP -> Venta : Aplica descuento si es válido
+Venta -> ERP : Retorna nuevo total
+ERP -> Cliente : Muestra el precio con descuento aplicado
+@enduml

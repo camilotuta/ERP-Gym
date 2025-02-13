@@ -1,0 +1,13 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "Venta" as Venta
+participant "InventarioCompras" as Inventario
+
+Empleado -> ERP : Registra una nueva venta
+ERP -> Venta : Crea un registro de venta
+Venta -> Inventario : Verifica disponibilidad de productos
+Inventario -> Venta : Confirma disponibilidad
+Venta -> ERP : Confirma registro de la venta
+ERP -> Empleado : Muestra confirmación
+@enduml

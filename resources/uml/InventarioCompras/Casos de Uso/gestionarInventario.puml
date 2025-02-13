@@ -1,0 +1,11 @@
+@startuml
+actor Empleado
+actor Administrador
+
+(Agregar Producto) <|-- (Gestionar Inventario)
+(Eliminar Producto) <|-- (Gestionar Inventario)
+(Actualizar Stock) <|-- (Gestionar Inventario)
+
+Empleado -- (Gestionar Inventario)
+Administrador -- (Gestionar Inventario)
+@enduml

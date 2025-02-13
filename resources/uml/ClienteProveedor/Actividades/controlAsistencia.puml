@@ -1,0 +1,13 @@
+@startuml actividad_control_asistencia
+start
+:Cliente escanea código QR o ingresa credencial;
+:Verificar membresía activa;
+if (Membresía válida?) then (Sí)
+  :Registrar asistencia;
+  :Actualizar estadísticas de asistencia;
+  stop
+else (No)
+  :Denegar acceso;
+  :Notificar cliente sobre problema;
+  stop
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class Nomina {
+  +String idEmpleado
+  +String nombre
+  +double salarioBase
+  +double bonificaciones
+  +double deducciones
+  +Date fechaPago
+  +void calcularSalario()
+  +void generarRecibo()
+  +void aplicarDeducciones()
+  +void gestionarBonificaciones()
+}
+@enduml

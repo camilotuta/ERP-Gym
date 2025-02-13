@@ -1,0 +1,16 @@
+@startuml
+start
+:Empleado inicia el registro de venta;
+:El sistema solicita detalles del cliente y productos;
+:Empleado ingresa la información;
+:Verificar disponibilidad en inventario;
+if (¿Stock suficiente?) then (Sí)
+  :Registrar la venta;
+  :Actualizar inventario;
+else (No)
+  :Mostrar error y sugerir modificación;
+endif
+:Generar factura;
+:Mostrar confirmación al empleado;
+stop
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "Nómina" as Nomina
+
+Administrador -> ERP : Solicita aplicar deducciones
+ERP -> Nomina : Obtiene lista de empleados y deducciones aplicables
+Nomina -> ERP : Retorna datos
+ERP -> Nomina : Aplica deducciones al salario
+Nomina -> ERP : Confirma actualización
+ERP -> Administrador : Muestra salarios ajustados
+@enduml

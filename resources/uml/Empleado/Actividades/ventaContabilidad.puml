@@ -1,0 +1,20 @@
+@startuml actividad_venta_contabilidad
+start
+:Empleado recibe solicitud de cliente;
+:Verificar membresía activa del cliente;
+if (Membresía activa?) then (Sí)
+  :Generar cotización de servicio (Membresía, clases, etc.);
+  :Presentar opciones al cliente;
+  :Cliente selecciona opción;
+  :Registrar venta en sistema;
+  :Actualizar inventario de servicios;
+  :Registrar pago;
+  :Actualizar contabilidad (Ingreso);
+  :Generar factura para el cliente;
+  :Enviar confirmación al cliente;
+  stop
+else (No)
+  :Notificar al cliente sobre la inactividad de su membresía;
+  stop
+endif
+@enduml

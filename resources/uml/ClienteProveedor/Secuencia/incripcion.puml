@@ -1,0 +1,20 @@
+@startuml Escenario7_Inscripcion
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Servicio de Membresías" as Membresias
+participant "Sistema de Pago" as Pago
+participant "Base de Datos" as DB
+
+Cliente -> ERP: Solicitar Registro
+ERP -> Cliente: Solicitar Datos (Nombre, Email, etc.)
+Cliente -> ERP: Proporcionar Datos
+ERP -> Membresias: Elegir Plan (Básico, Premium)
+Membresias --> ERP: Costo del Plan
+ERP -> Cliente: Solicitar Método de Pago
+Cliente -> ERP: Proporcionar Tarjeta
+ERP -> Pago: Procesar Pago Inicial
+Pago --> ERP: Pago Aprobado
+ERP -> DB: Registrar Cliente y Membresía
+DB --> ERP: Registro Exitoso
+ERP --> Cliente: Confirmación + Credenciales
+@enduml

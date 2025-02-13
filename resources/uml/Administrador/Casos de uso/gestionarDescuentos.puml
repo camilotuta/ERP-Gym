@@ -1,0 +1,7 @@
+@startuml Casos de uso
+left to right direction
+actor Administrador
+rectangle GymERP {
+  Administrador -- (Gestionar Descuentos)
+}
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+start
+:Empleado solicita su recibo de pago;
+:El sistema recupera datos de la nómina;
+:Genera recibo en formato PDF;
+:Permite descargar o imprimir;
+:Mostrar confirmación al empleado;
+stop
+@enduml

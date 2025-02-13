@@ -1,0 +1,10 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "Nómina" as Nomina
+
+Empleado -> ERP : Solicita su recibo de pago
+ERP -> Nomina : Obtiene detalles del pago
+Nomina -> ERP : Retorna detalles del recibo
+ERP -> Empleado : Muestra y permite descargar recibo
+@enduml

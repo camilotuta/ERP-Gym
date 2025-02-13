@@ -1,0 +1,13 @@
+@startuml
+start
+:Cliente solicita un descuento;
+:El sistema verifica elegibilidad del cliente;
+if (¿Cliente elegible?) then (Sí)
+  :Aplicar descuento al total;
+  :Actualizar precio final;
+else (No)
+  :Rechazar solicitud;
+endif
+:Mostrar total actualizado;
+stop
+@enduml

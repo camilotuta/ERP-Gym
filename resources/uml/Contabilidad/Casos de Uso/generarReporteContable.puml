@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+
+(Seleccionar Período) --> (Generar Reporte Contable)
+(Obtener Datos) --> (Generar Reporte Contable)
+(Generar Documento) --> (Generar Reporte Contable)
+
+Administrador -- (Generar Reporte Contable)
+@enduml

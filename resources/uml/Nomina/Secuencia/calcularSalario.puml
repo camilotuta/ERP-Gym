@@ -1,0 +1,12 @@
+@startuml
+actor Administrador
+participant "Sistema ERP" as ERP
+participant "Nómina" as Nomina
+
+Administrador -> ERP : Solicita cálculo de salario
+ERP -> Nomina : Obtiene información del empleado
+Nomina -> ERP : Retorna datos de salario base, bonificaciones y deducciones
+ERP -> Nomina : Calcula salario final
+Nomina -> ERP : Retorna salario calculado
+ERP -> Administrador : Muestra salario neto del empleado
+@enduml

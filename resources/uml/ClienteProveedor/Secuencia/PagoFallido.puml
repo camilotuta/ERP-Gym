@@ -1,0 +1,16 @@
+@startuml Escenario5_PagoFallido
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Sistema de Pago" as Pago
+
+Cliente -> ERP: Reservar Clase Premium
+ERP -> Cliente: Solicitar Pago ($15)
+Cliente -> ERP: Proporcionar Tarjeta A
+ERP -> Pago: Procesar $15
+Pago --> ERP: "Tarjeta Rechazada"
+ERP --> Cliente: "Error en Pago"
+Cliente -> ERP: Proporcionar Tarjeta B
+ERP -> Pago: Procesar $15
+Pago --> ERP: "Pago Aprobado"
+ERP --> Cliente: "Reserva Confirmada"
+@enduml

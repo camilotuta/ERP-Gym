@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+
+(Seleccionar Empleado) --> (Aplicar Deducciones)
+(Seleccionar Tipo de Deducción) --> (Aplicar Deducciones)
+(Actualizar Salario) --> (Aplicar Deducciones)
+
+Administrador -- (Aplicar Deducciones)
+@enduml

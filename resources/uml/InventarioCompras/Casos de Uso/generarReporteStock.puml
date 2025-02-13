@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+
+(Seleccionar Período) --> (Generar Reporte de Stock)
+(Obtener Datos) --> (Generar Reporte de Stock)
+(Generar Documento) --> (Generar Reporte de Stock)
+
+Administrador -- (Generar Reporte de Stock)
+@enduml

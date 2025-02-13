@@ -1,0 +1,8 @@
+@startuml
+start
+:Administrador solicita cálculo de balance;
+:El sistema obtiene ingresos y gastos registrados;
+:Calcula balance;
+:Mostrar resultado al administrador;
+stop
+@enduml

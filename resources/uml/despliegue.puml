@@ -1,0 +1,37 @@
+@startuml despliegue
+
+node "Servidor de Aplicaciones" {
+  component "ERP Gym" as ERP
+  component "Servicio de Pago" as Pago
+  component "Servicio de Clases" as Clases
+  component "Servicio de Membresías" as Membresias
+  component "Servicio de Inventario" as Inventario
+  component "Servicio de Contabilidad" as Contabilidad
+  component "Servicio de Nómina" as Nomina
+  component "Servicio de Ventas" as Ventas
+}
+
+node "Base de Datos" {
+  database "MySQL" as DB
+}
+
+node "Cliente" {
+  actor "Usuario" as User
+  actor "Administrador" as Admin
+  actor "Empleado" as Empleado
+}
+
+User --> ERP : Interacción
+Admin --> ERP : Gestión del sistema
+Empleado --> ERP : Uso interno
+
+ERP --> DB : Almacenamiento
+ERP --> Pago : Procesamiento de Pagos
+ERP --> Clases : Gestión de Clases
+ERP --> Membresias : Gestión de Membresías
+ERP --> Inventario : Gestión de Stock
+ERP --> Contabilidad : Control financiero
+ERP --> Nomina : Administración de sueldos
+ERP --> Ventas : Registro de transacciones
+
+@enduml

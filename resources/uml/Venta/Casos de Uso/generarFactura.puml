@@ -1,0 +1,11 @@
+@startuml
+actor Cliente
+actor Empleado
+
+(Consultar Datos de la Venta) --> (Generar Factura)
+(Generar Documento) --> (Generar Factura)
+(Enviar Factura) --> (Generar Factura)
+
+Empleado -- (Generar Factura)
+Cliente -- (Solicitar Factura)
+@enduml

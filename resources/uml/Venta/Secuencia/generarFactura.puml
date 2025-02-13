@@ -1,0 +1,13 @@
+@startuml
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Venta" as Venta
+participant "Contabilidad" as Contabilidad
+
+Cliente -> ERP : Solicita factura de compra
+ERP -> Venta : Obtiene detalles de la venta
+Venta -> Contabilidad : Genera factura
+Contabilidad -> Venta : Retorna factura generada
+Venta -> ERP : Envia factura al cliente
+ERP -> Cliente : Muestra y permite descargar factura
+@enduml

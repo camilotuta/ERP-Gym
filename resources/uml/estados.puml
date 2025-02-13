@@ -1,0 +1,48 @@
+@startuml estados
+
+[*] --> Pendiente
+
+Pendiente --> Aprobado : Aprobación de Compra
+Pendiente --> Rechazado : Rechazo de Compra
+Pendiente --> Cancelado : Cancelación del Pedido
+
+Aprobado --> EnProceso : Inicio de Preparación
+EnProceso --> Enviado : Envío Realizado
+Enviado --> Entregado : Confirmación de Entrega
+Entregado --> Completado : Pedido Finalizado
+
+Enviado --> Devolución : Cliente Rechaza Pedido
+Devolución --> EnProceso : Revisión del Producto
+Devolución --> Rechazado : Devolución No Aceptada
+
+Completado --> Facturado : Generar Factura
+Facturado --> [*]
+
+Rechazado --> [*]
+Cancelado --> [*]
+Completado --> [*]
+
+state Aprobado {
+  [*] --> EnProceso
+  EnProceso --> Enviado
+  Enviado --> Entregado
+  Entregado --> Completado
+  Completado --> Facturado
+}
+
+state Rechazado {
+  [*] --> Finalizado
+  Finalizado --> [*]
+}
+
+state Cancelado {
+  [*] --> Finalizado
+  Finalizado --> [*]
+}
+
+state Facturado {
+  [*] --> Finalizado
+  Finalizado --> [*]
+}
+
+@enduml

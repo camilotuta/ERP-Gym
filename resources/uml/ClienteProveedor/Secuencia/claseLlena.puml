@@ -1,0 +1,16 @@
+@startuml Escenario4_ClaseLlena
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Sistema de Clases" as Clases
+
+Cliente -> ERP: Reservar Clase (Zumba 18:00)
+ERP -> Clases: Verificar Cupo
+Clases --> ERP: Sin Cupos
+ERP -> Clases: Obtener Alternativas
+Clases --> ERP: Pilates 19:00 | Zumba 09:00
+ERP --> Cliente: "¿Alternativas?"
+Cliente -> ERP: Seleccionar Pilates 19:00
+ERP -> Clases: Asignar Cupo (Pilates)
+Clases --> ERP: Cupo Asignado
+ERP --> Cliente: Confirmación Pilates
+@enduml

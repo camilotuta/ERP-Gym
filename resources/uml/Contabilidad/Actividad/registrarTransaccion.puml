@@ -1,0 +1,9 @@
+@startuml
+start
+:Administrador registra una nueva transacción;
+:El sistema solicita detalles (monto, fecha, categoría);
+:Valida los datos ingresados;
+:Guarda la transacción en la base de datos;
+:Mostrar confirmación;
+stop
+@enduml

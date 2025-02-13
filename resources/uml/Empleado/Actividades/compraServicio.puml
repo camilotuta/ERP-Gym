@@ -1,0 +1,19 @@
+@startuml actividad_compra_servicios
+start
+:Empleado recibe solicitud de cliente para nuevos servicios;
+:Verificar si el servicio está disponible;
+if (Servicio disponible?) then (Sí)
+  :Registrar solicitud de compra de servicio;
+  :Generar orden de compra;
+  :Confirmar disponibilidad con el proveedor;
+  :Registrar compra en el sistema;
+  :Actualizar inventario de servicios;
+  :Actualizar contabilidad (Gasto);
+  :Generar factura de compra;
+  :Notificar al cliente sobre la compra realizada;
+  stop
+else (No)
+  :Notificar al cliente que el servicio no está disponible;
+  stop
+endif
+@enduml

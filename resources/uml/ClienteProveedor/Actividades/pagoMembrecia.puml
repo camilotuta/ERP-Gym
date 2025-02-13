@@ -1,0 +1,27 @@
+@startuml actividad_pago_membresia
+start
+:Cliente selecciona plan de membresía;
+:Mostrar detalles y beneficios del plan;
+:Calcular costo total;
+:Seleccionar metodo de pago;
+
+if (Pago aprobado?) then (Sí)
+  :Registrar pago en el sistema;
+  :Actualizar estado de membresía;
+  :Generar y enviar factura;
+  :Notificar al cliente;
+  :Actualizar historial de transacciones;
+  stop
+else (No)
+  :Mostrar mensaje de error;
+  :Ofrecer reintentar con otro método de pago;
+  if (Cliente intenta nuevamente?) then (Sí)
+    :Seleccionar nuevo método de pago;
+    :Recalcular costo total;
+    -> Seleccionar metodo de pago;
+  else (No)
+    :Cancelar proceso de pago;
+    stop
+  endif
+endif
+@enduml

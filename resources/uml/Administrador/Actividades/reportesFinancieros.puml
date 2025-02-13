@@ -1,0 +1,13 @@
+@startuml actividad_reportes_financieros
+start
+:Administrador accede al módulo de reportes;
+:Selecciona tipo de reporte (Ingresos, Gastos, Balance);
+:Definir período de análisis;
+:Extraer datos financieros;
+:Generar reporte;
+if (Exportar?) then (Sí)
+  :Generar PDF/Excel;
+endif
+:Mostrar reporte en pantalla;
+stop
+@enduml

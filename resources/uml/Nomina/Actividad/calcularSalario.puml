@@ -1,0 +1,9 @@
+@startuml
+start
+:Administrador solicita cálculo de salario;
+:El sistema obtiene salario base, bonificaciones y deducciones;
+:Calcula salario neto;
+:Guarda el cálculo en la base de datos;
+:Mostrar salario al administrador;
+stop
+@enduml

@@ -1,0 +1,17 @@
+@startuml Escenario3_MembresiaInactiva
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Empleado" as Empleado
+participant "Base de Datos" as DB
+
+Cliente -> ERP: Reservar Clase (Spinning)
+ERP -> DB: Verificar Membresía
+DB --> ERP: Membresía Inactiva
+ERP --> Cliente: "Membresía Vencida"
+Cliente -> ERP: Solicitar Renovación
+ERP -> Empleado: Notificar Renovación
+Empleado -> DB: Actualizar Membresía
+DB --> Empleado: Membresía Activada
+Empleado --> ERP: Renovación Exitosa
+ERP --> Cliente: "¡Membresía Renovada!"
+@enduml

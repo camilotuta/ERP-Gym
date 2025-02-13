@@ -1,0 +1,16 @@
+@startuml
+start
+:Administrador accede a la gestión de inventario;
+:El sistema muestra el estado actual del stock;
+:Administrador selecciona acción (agregar, eliminar, modificar);
+if (¿Modificar cantidad?) then (Sí)
+  :Actualizar stock;
+else if (¿Eliminar producto?) then (Sí)
+  :Eliminar producto del inventario;
+else if (¿Agregar nuevo producto?) then (Sí)
+  :Registrar nuevo producto;
+endif
+:Guardar cambios;
+:Mostrar confirmación al administrador;
+stop
+@enduml

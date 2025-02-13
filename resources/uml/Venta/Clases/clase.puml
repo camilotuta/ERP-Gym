@@ -1,0 +1,14 @@
+@startuml
+class Venta {
+  +String idVenta
+  +Date fecha
+  +double total
+  +List<String> productosVendidos
+  +String cliente
+  +void agregarProducto()
+  +void calcularTotal()
+  +void aplicarDescuento()
+  +void generarFactura()
+  +void registrarPago()
+}
+@enduml

@@ -1,0 +1,16 @@
+@startuml actividad_registro_pago_cliente
+start
+:Empleado recibe pago de cliente;
+:Verificar cantidad y método de pago;
+if (Pago correcto?) then (Sí)
+  :Registrar pago en sistema;
+  :Actualizar estado de cuenta del cliente;
+  :Actualizar contabilidad (Ingreso);
+  :Emitir recibo de pago al cliente;
+  :Enviar confirmación de pago;
+  stop
+else (No)
+  :Notificar error en el pago;
+  stop
+endif
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+actor Administrador
+actor Empleado
+
+(Seleccionar Empleado) --> (Generar Recibo de Nómina)
+(Generar Documento) --> (Generar Recibo de Nómina)
+(Enviar Recibo) --> (Generar Recibo de Nómina)
+
+Administrador -- (Generar Recibo de Nómina)
+Empleado -- (Consultar Recibo)
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+
+(Obtener Ingresos) --> (Calcular Balance Financiero)
+(Obtener Gastos) --> (Calcular Balance Financiero)
+(Calcular Diferencia) --> (Calcular Balance Financiero)
+
+Administrador -- (Calcular Balance Financiero)
+@enduml

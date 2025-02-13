@@ -1,0 +1,10 @@
+@startuml
+start
+:Administrador accede a la gestión de deducciones;
+:El sistema muestra lista de empleados;
+:Selecciona empleado y deducciones a aplicar;
+:Actualizar salario con deducciones;
+:Guardar cambios;
+:Mostrar resumen al administrador;
+stop
+@enduml

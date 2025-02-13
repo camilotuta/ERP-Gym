@@ -1,0 +1,18 @@
+@startuml
+class ClienteProveedor {
+  +String id
+  +String nombre
+  +String direccion
+  +String telefono
+  +String email
+  +String tipo  // Cliente o Proveedor
+  +Date fechaRegistro
+  +double saldoPendiente
+  +void realizarPedido()
+  +void verHistorial()
+  +void actualizarPerfil()
+  +void gestionarPagos()
+  +void enviarNotificacion()
+  +void aplicarDescuento()
+}
+@enduml

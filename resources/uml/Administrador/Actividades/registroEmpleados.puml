@@ -1,0 +1,15 @@
+@startuml actividad_registro_empleados
+start
+:Administrador accede al módulo de empleados;
+:Ingresar datos personales y laborales;
+:Validar información;
+if (Datos correctos?) then (Sí)
+  :Registrar empleado en el sistema;
+  :Asignar rol y permisos;
+  :Generar credenciales de acceso;
+  :Enviar confirmación al empleado;
+  stop
+else (No)
+  :Mostrar mensaje de error;
+  stop
+@enduml

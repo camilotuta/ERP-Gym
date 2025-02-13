@@ -1,0 +1,12 @@
+@startuml
+actor Administrador
+actor Empleado
+
+(Consultar Datos del Empleado) --> (Calcular Salario)
+(Aplicar Bonificaciones) --> (Calcular Salario)
+(Aplicar Deducciones) --> (Calcular Salario)
+(Guardar en Base de Datos) --> (Calcular Salario)
+
+Administrador -- (Calcular Salario)
+Empleado -- (Consultar Datos del Empleado)
+@enduml

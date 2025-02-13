@@ -1,0 +1,15 @@
+@startuml Escenario8_Desuscripcion
+actor Cliente
+participant "Sistema ERP" as ERP
+participant "Servicio de Membresías" as Membresias
+participant "Base de Datos" as DB
+
+Cliente -> ERP: Solicitar Baja de Membresía
+ERP -> DB: Verificar Estado de Membresía
+DB --> ERP: Membresía Activa
+ERP -> Membresias: Validar Periodo de Cancelación
+Membresias --> ERP: "Cancelación Permitida"
+ERP -> DB: Actualizar Estado a "Inactivo"
+DB --> ERP: Estado Actualizado
+ERP --> Cliente: Confirmación de Baja + Email
+@enduml
