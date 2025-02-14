@@ -1,0 +1,46 @@
+@startmindmap
+* Administrador
+** Gestionar registros de base de datos
+*** Crear registros
+**** Validar datos
+**** Insertar en la base de datos
+**** Confirmar creación
+*** Leer registros
+**** Buscar por ID
+**** Filtrar por criterios
+**** Exportar datos
+*** Actualizar registros
+**** Validar cambios
+**** Aplicar modificaciones
+**** Registrar historial
+*** Eliminar registros
+**** Confirmar eliminación
+**** Registrar acción en logs
+**** Notificar partes afectadas
+** Dar permisos a usuarios
+*** Asignar roles
+**** Definir nivel de acceso
+**** Asociar permisos
+**** Notificar usuario
+*** Revocar roles
+**** Identificar roles activos
+**** Confirmar revocación
+**** Registrar cambios
+*** Modificar permisos
+**** Revisar permisos actuales
+**** Aplicar cambios
+**** Generar reporte de auditoría
+** Cancelar solicitudes de otras entidades
+*** Ver solicitudes pendientes
+**** Filtrar por estado
+**** Ordenar por prioridad
+**** Mostrar detalles
+*** Validar cancelación
+**** Revisar justificación
+**** Consultar partes involucradas
+**** Evaluar impacto
+*** Confirmar cancelación
+**** Registrar en sistema
+**** Notificar a las partes
+**** Archivar solicitud cancelada
+@endmindmap

@@ -1,0 +1,31 @@
+@startmindmap
+* Venta
+** Aplicar descuentos a clientes
+*** Validar descuentos disponibles
+*** Aplicar al total
+*** Confirmar aplicación
+** Generar factura y emitirla al cliente mediante correo
+*** Crear factura
+*** Enviar por correo
+*** Registrar envío
+** Registrar venta de membresías
+*** Seleccionar plan
+*** Confirmar pago
+*** Emitir comprobante
+** Renovar plan
+*** Verificar vigencia
+*** Procesar pago
+*** Confirmar renovación
+** Cancelar plan
+*** Solicitar cancelación
+*** Aplicar política de reembolso
+*** Confirmar cancelación
+** Registrar ventas de productos
+*** Seleccionar productos
+*** Procesar pago
+*** Emitir recibo
+** Gestionar historial de compras y renovaciones de cada cliente
+*** Registrar compras
+*** Actualizar historial
+*** Consultar registros
+@endmindmap

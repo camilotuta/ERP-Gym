@@ -1,0 +1,23 @@
+@startmindmap
+* Inventario-Compras
+** Eliminar producto
+*** Verificar existencia
+*** Registrar eliminación
+*** Notificar cambios
+** Crear producto
+*** Ingresar datos del producto
+*** Asignar código y categoría
+*** Confirmar registro
+** Gestionar stock
+*** Monitorear niveles de inventario
+*** Realizar ajustes
+*** Notificar reposición
+** Generar reportes de movimientos en el inventario
+*** Registrar entradas y salidas
+*** Consolidar información
+*** Presentar informe
+** Gestionar órdenes de compra de los proveedores
+*** Identificar necesidades
+*** Realizar solicitud
+*** Confirmar recepción
+@endmindmap

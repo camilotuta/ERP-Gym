@@ -1,0 +1,12 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "Base de Datos" as DB
+
+Empleado -> ERP: Ingresar datos del cliente
+ERP -> DB: Validar si el cliente ya existe
+DB -> ERP: Confirmar disponibilidad
+ERP -> DB: Registrar nuevo cliente
+DB -> ERP: Confirmación de registro
+ERP -> Empleado: Mostrar mensaje de éxito
+@enduml

@@ -1,0 +1,28 @@
+@startmindmap
+
+* Cliente-Proveedor
+** Inscribirse
+*** Completar formulario
+*** Enviar documentación requerida
+*** Confirmar inscripción
+** Pagar membresía
+*** Seleccionar plan
+*** Procesar pago
+*** Generar comprobante
+** Inscribirse a una clase
+*** Buscar disponibilidad
+*** Reservar cupo
+*** Confirmar inscripción
+** Desuscribirse
+*** Solicitar baja
+*** Confirmar cancelación
+*** Registrar en sistema
+** Ingresar al gimnasio
+*** Validar membresía
+*** Registrar entrada
+*** Acceder a instalaciones
+** Salir del gimnasio
+*** Registrar salida
+*** Verificar tiempo de estancia
+*** Notificar salida
+@endmindmap

@@ -1,0 +1,20 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "Base de Datos" as DB
+participant "Cliente" as Cliente
+participant "Contabilidad" as Contabilidad
+participant "Inventario" as Inventario
+
+Empleado -> ERP: Ingresar productos y datos del cliente
+ERP -> Inventario: Verificar disponibilidad de productos
+Inventario -> ERP: Confirmar stock disponible
+ERP -> Cliente: Calcular y mostrar total de la compra
+Cliente -> ERP: Confirmar pago
+ERP -> Contabilidad: Registrar transacción
+Contabilidad -> ERP: Confirmación de registro
+ERP -> Inventario: Actualizar stock
+ERP -> DB: Registrar venta
+DB -> ERP: Confirmación de registro
+ERP -> Empleado: Mostrar comprobante de venta
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+actor Empleado
+participant "Sistema ERP" as ERP
+participant "Base de Datos" as DB
+participant "Inventario" as Inventario
+participant "Contabilidad" as Contabilidad
+participant "Cliente" as Cliente
+
+Cliente -> Empleado: Solicitar devolución de un producto
+Empleado -> ERP: Validar condiciones de la devolución
+ERP -> DB: Verificar historial de la compra
+DB -> ERP: Confirmar datos de la compra
+ERP -> Inventario: Verificar estado del producto
+Inventario -> ERP: Aprobar/Rechazar devolución
+ERP -> Contabilidad: Reembolsar saldo si aplica
+Contabilidad -> ERP: Confirmar transacción
+ERP -> Cliente: Notificar resolución de la solicitud
+@enduml

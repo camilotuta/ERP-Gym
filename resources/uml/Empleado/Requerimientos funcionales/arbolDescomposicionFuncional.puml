@@ -1,0 +1,23 @@
+@startmindmap
+* Empleado
+** Registrar cliente
+*** Recopilar datos
+*** Validar información
+*** Confirmar registro
+** Retirar cliente
+*** Procesar solicitud
+*** Confirmar baja
+*** Registrar en sistema
+** Registrar pago cliente
+*** Verificar monto
+*** Procesar transacción
+*** Generar recibo
+** Realizar venta
+*** Seleccionar productos
+*** Procesar pago
+*** Emitir comprobante
+** Registrar nuevos productos
+*** Ingresar detalles del producto
+*** Asignar categoría
+*** Confirmar registro
+@endmindmap

@@ -1,0 +1,27 @@
+@startmindmap
+* Nómina
+** Gestionar información personal de los empleados
+*** Registrar datos personales
+*** Actualizar información
+*** Almacenar documentación
+** Calcular salarios de empleados
+*** Recopilar horas trabajadas
+*** Aplicar salario base
+*** Incluir bonificaciones
+** Aplicar deducciones de impuestos, seguridad social y otros descuentos
+*** Calcular impuestos
+*** Aplicar deducciones legales
+*** Registrar descuentos adicionales
+** Calcular horas extras, bonos o comisiones si aplican
+*** Registrar horas extras
+*** Calcular bonos
+*** Aplicar comisiones
+** Generar nómina quincenal
+*** Consolidar pagos
+*** Validar cálculos
+*** Aprobar pago
+** Emitir recibos de pago mediante correo a cada empleado
+*** Generar recibo en PDF
+*** Enviar por correo
+*** Registrar entrega
+@endmindmap
